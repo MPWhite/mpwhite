@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.scss';
-import {WithNavigation} from "./features/navigation/NavigationComponent";
 
 function App() {
   return (
