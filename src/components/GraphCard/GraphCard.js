@@ -35,7 +35,7 @@ class GraphCard extends Component {
         }
       },
       yAxis: [{
-        visible: false,
+        visible: true,
         title: {
           text: 'Hours',
           style: {

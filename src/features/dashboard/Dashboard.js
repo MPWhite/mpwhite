@@ -8,6 +8,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div className='Dashboard'>
+        <h1>Live Stats</h1>
         <Grid container spacing={3}>
           <Grid item>
             <StatCard title='Sleep' value={8.7} unit='hours'/>
@@ -21,6 +22,9 @@ class Dashboard extends Component {
           <Grid item>
             <StatCard title='Mood' value={6.5} unit='/10'/>
           </Grid>
+        </Grid>
+        <h1>Recent Data</h1>
+        <Grid container spacing={3}>
           <Grid item>
             <GraphCard />
           </Grid>
