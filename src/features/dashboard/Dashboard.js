@@ -17,7 +17,7 @@ class Dashboard extends Component {
     setInterval(() => {
       console.log("Fetching")
       this.fetchData()
-    }, 500000)
+    }, 50000)
   }
 
   fetchData() {
@@ -46,7 +46,7 @@ class Dashboard extends Component {
     console.log(data)
     return (
       <div className='Dashboard'>
-        <h1>Live Stats</h1>
+        <h1>Live Stats: {new Date().toLocaleDateString()}</h1>
         <Grid container spacing={3}>
           <Grid item>
             <StatCard title='Sleep 😴' value={data?.sleep.toFixed(1)} unit='hr' />
@@ -55,7 +55,7 @@ class Dashboard extends Component {
             <StatCard title='Caffeine ☕' value={data?.caffeine} unit='mg'/>
           </Grid>
           <Grid item>
-            <StatCard title='Coding 👨‍💻' value={data?.coding} unit='hr'/>
+            <StatCard title='Coding 👨‍💻' value={data?.coding.toFixed(1)} unit='hr'/>
           </Grid>
           <Grid item>
             <StatCard title='Exercise 🏃‍' value={data?.exercise} unit='hr'/>
