@@ -1,0 +1,18 @@
+.StatCard{
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: #1e1e1e;
+  color: white;
+
+  &__title{
+    color: white;
+  }
+
+  &__value{
+    color: #bb86fc;
+    font-size: 60px;
+    font-weight: 500;
+  }
+
+}

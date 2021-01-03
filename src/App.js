@@ -1,12 +1,14 @@
 import './App.scss';
+import React, {Component} from 'react';
+import Dashboard from "./features/dashboard/Dashboard";
 
-function App() {
-  return (
-          <div className='Home'>
-            <h1>Hey, I'm Matt.</h1>
-            <p>Did you know? Flights are cheapest within 2 weeks of departure. Make sure you wait till then next time you want to fly on the cheap!</p>
-          </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Dashboard />
+    );
+  }
 }
+
 
 export default App;
