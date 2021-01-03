@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './dashboard.scss'
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import GraphCard from "../../components/GraphCard/GraphCard";
 import StatCard from "../../components/StatCard/StatCard";
 

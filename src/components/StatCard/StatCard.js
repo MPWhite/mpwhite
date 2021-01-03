@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './StatCard.scss'
 
 const StatCard = ({title, value, unit}) => {
