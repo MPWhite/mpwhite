@@ -52,7 +52,21 @@ class GraphCard extends Component {
         }
       }],
       xAxis: [{
-        visible: false,
+        visible: true,
+        title: {
+          text: 'Day',
+          style: {
+            color: '#ffffff',
+            fontWeight: 500
+          }
+        },
+        gridLineDashStyle: 'dash',
+        labels: {
+          format: '{value}',
+          style: {
+            color: '#ffffff'
+          }
+        }
       }],
       chart: {
         backgroundColor: '#1e1e1e',
