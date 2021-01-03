@@ -1,7 +1,7 @@
 .StatCard{
   display: flex;
   flex-direction: column;
-  padding: 25px;
+  padding: 15px;
   background-color: #1e1e1e;
   color: white;
 
@@ -11,7 +11,7 @@
 
   &__value{
     color: #bb86fc;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 500;
   }
 

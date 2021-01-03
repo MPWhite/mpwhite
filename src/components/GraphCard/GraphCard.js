@@ -35,6 +35,7 @@ class GraphCard extends Component {
         }
       },
       yAxis: [{
+        visible: false,
         title: {
           text: 'Hours',
           style: {
@@ -54,7 +55,8 @@ class GraphCard extends Component {
         visible: false,
       }],
       chart: {
-        backgroundColor: '#1e1e1e'
+        backgroundColor: '#1e1e1e',
+        height: '300px'
       },
       colors: ['#bb86fc'],
       legend: {
