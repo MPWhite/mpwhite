@@ -1,7 +1,7 @@
 import React from 'react';
 import './StatCard.scss'
 
-const StatCard = ({title, value, unit}) => {
+const StatCard = ({title, value, unit, time}) => {
     return (
       <div>
         <div className='StatCard'>
@@ -10,6 +10,7 @@ const StatCard = ({title, value, unit}) => {
             <span className='StatCard__value'>{value}</span>
             <span className='StatCard__unit'>{unit}</span>
           </div>
+          <span className='StatCard__date'>{time}</span>
         </div>
       </div>
     );
