@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './GraphCard.scss'
 import Highcharts from 'highcharts'
 import HighchartsReact from "highcharts-react-official";
-import moment from 'moment'
 
 const GraphCard = ({data}) => {
   const parsedData = data.map(d => {

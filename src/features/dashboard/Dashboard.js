@@ -69,9 +69,9 @@ class Dashboard extends Component {
           <Grid item>
             <GraphCard data={data?.sleep_durations}/>
           </Grid>
-          {/*<Grid item>*/}
-          {/*  <BoxPlotCard />*/}
-          {/*</Grid>*/}
+          <Grid item>
+            <BoxPlotCard />
+          </Grid>
         </Grid>
       </div>
     );
