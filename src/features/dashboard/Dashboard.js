@@ -58,7 +58,7 @@ class Dashboard extends Component {
             <StatCard title='Coding 👨‍💻' value={data?.coding.toFixed(1)} unit='hr'/>
           </Grid>
           <Grid item>
-            <StatCard title='Exercise 🏃‍' value={data?.exercise} unit='hr'/>
+            <StatCard title='Exercise 🏃‍' value={data?.exercise} unit='min'/>
           </Grid>
           <Grid item>
             <StatCard title='Mood 🧘' value={data?.mood} unit='/10'/>
