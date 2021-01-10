@@ -3,7 +3,7 @@ import './dashboard.scss'
 import Grid from "@material-ui/core/Grid";
 import GraphCard from "../../components/GraphCard/GraphCard";
 import StatCard from "../../components/StatCard/StatCard";
-import BoxPlotCard from "../../components/BoxPlotCard/BoxPlotCard";
+import BarChartCard from "../../components/BarChart/BartchartCard";
 
 class Dashboard extends Component {
   constructor() {
@@ -52,13 +52,13 @@ class Dashboard extends Component {
             <StatCard title='Sleep 😴' value={data?.sleep.toFixed(1)} unit='hr' />
           </Grid>
           <Grid item>
-            <StatCard title='Caffeine ☕' value={data?.caffeine} unit='mg'/>
+            <StatCard title='Caffeine ☕' value={data?.caffeine || 0} unit='mg'/>
           </Grid>
           <Grid item>
             <StatCard title='Coding 👨‍💻' value={data?.coding.toFixed(1)} unit='hr'/>
           </Grid>
           <Grid item>
-            <StatCard title='Exercise 🏃‍' value={data?.exercise} unit='min'/>
+            <StatCard title='Exercise 🏃‍' value={data?.exercise || 0} unit='min'/>
           </Grid>
           <Grid item>
             <StatCard title='Mood 🧘' value={data?.mood} unit='/10'/>
@@ -70,7 +70,7 @@ class Dashboard extends Component {
             <GraphCard data={data?.sleep_durations}/>
           </Grid>
           <Grid item>
-            <BoxPlotCard />
+            <BarChartCard data={data?.coding_durations_by_week}/>
           </Grid>
         </Grid>
       </div>
