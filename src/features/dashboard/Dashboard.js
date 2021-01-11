@@ -17,7 +17,7 @@ class Dashboard extends Component {
     setInterval(() => {
       console.log("Fetching")
       this.fetchData()
-    }, 50000)
+    }, 5000)
   }
 
   fetchData() {
@@ -43,7 +43,23 @@ class Dashboard extends Component {
     if (!loaded || !data) {
       return <div />
     }
-    console.log(data)
+
+    const parsedSleepData = data?.sleep_durations.map(d => {
+      return {
+        x: Date.parse(d.date),
+        y: d.duration
+      }
+    })
+
+    const parsedMoodData = data?.mood_data.map(d => {
+      return {
+        x: Date.parse(d.updated_on),
+        y: d.score
+      }
+    })
+
+    console.log("FUCK YOU FIND ME", parsedMoodData)
+
     return (
       <div className='Dashboard'>
         <h1>Live Stats: {new Date().toLocaleDateString()}</h1>
@@ -67,10 +83,13 @@ class Dashboard extends Component {
         <h1>Recent Data</h1>
         <Grid container spacing={3}>
           <Grid item>
-            <GraphCard data={data?.sleep_durations}/>
+            <GraphCard data={parsedSleepData} title={'Total Sleep'} seriesName={'Hours'}/>
           </Grid>
           <Grid item>
             <BarChartCard data={data?.coding_durations_by_week}/>
+          </Grid>
+          <Grid item>
+            <GraphCard data={parsedMoodData} title={'Mood'} seriesName={'Mood'}/>
           </Grid>
         </Grid>
       </div>

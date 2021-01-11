@@ -3,24 +3,18 @@ import './GraphCard.scss'
 import Highcharts from 'highcharts'
 import HighchartsReact from "highcharts-react-official";
 
-const GraphCard = ({data}) => {
-  const parsedData = data.map(d => {
-    return {
-      x: Date.parse(d.date),
-      y: d.duration
-    }
-  })
+const GraphCard = ({data, title, seriesName}) => {
   const series = {
-    name: 'Hours',
+    name: seriesName,
     lineWidth: 3,
-    data: parsedData,
+    data: data,
     animation: {
       duration: 1000,
     },
   }
   const sleepDurationOptions = {
     title: {
-      text: 'Total Sleep',
+      text: title,
       style: {
         color: '#ffffff',
         fontWeight: 500
@@ -29,7 +23,7 @@ const GraphCard = ({data}) => {
     yAxis: [{
       visible: true,
       title: {
-        text: 'Hours',
+        text: seriesName,
         style: {
           color: '#ffffff',
           fontWeight: 500
@@ -37,7 +31,7 @@ const GraphCard = ({data}) => {
       },
       gridLineDashStyle: 'dash',
       labels: {
-        format: '{value}h',
+        format: '{value}',
         style: {
           color: '#ffffff'
         }
